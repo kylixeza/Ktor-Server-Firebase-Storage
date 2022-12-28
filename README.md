@@ -18,6 +18,6 @@ Simple project to upload image from multipart to firebase storage in ktor server
 
 - rename it to whatever you want
 
-# One more!
+# Firebase Storage
 Don't forget to turn on the firebase storage in firebase project
 
