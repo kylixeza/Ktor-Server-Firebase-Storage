@@ -32,8 +32,7 @@ fun Application.configureRouting() {
                         val (fileName, fileBytes) = part.convert()
                         bucket.create(fileName, fileBytes, "image/png")
                         urlPath = FirebaseStorageUrl
-                            .createPath()
-                            .getDownloadUrl(fileName)
+                            .basePath getDownloadUrl(fileName)
                     }
                 }
                 call.respondText(urlPath)
@@ -54,10 +53,7 @@ fun Application.configureRouting() {
                         val (fileName, fileBytes) = part.convert()
                         bucket.create("avatar_url/images/$fileName", fileBytes, "image/png")
                         urlPath = FirebaseStorageUrl
-                            .createPath()
-                            .reference("avatar_url")
-                            .reference("images")
-                            .getDownloadUrl(fileName)
+                            .basePath reference "avatar_url" reference "images" getDownloadUrl fileName
                     }
                 }
                 call.respondText(urlPath)
