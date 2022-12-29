@@ -23,5 +23,5 @@ Simple project to upload image from multipart to firebase storage in ktor server
 - Don't forget to set permission in firebase storage
 
 # Test
-You can test this project using postman
+You can test this project using postman. The response will be the url of the image
 
